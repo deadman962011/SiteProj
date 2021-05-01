@@ -7,7 +7,7 @@
             <li class="">
                 <a href="#ProdMenu" data-toggle="collapse" aria-expanded="false">products</a>
                 <ul class="collapse list-unstyled" id="ProdMenu">
-                    <li><a href="{{ route("BookListGet",['SiteType'=>$SiteType,'SiteId'=>$SiteId]) }}">Products List</a></li>
+                    <li><a href="{{ route("ProductListGet",['SiteType'=>$SiteType,'SiteId'=>$SiteId]) }}">Products List</a></li>
                     <li><a href="{{ route("AddProductGet",['SiteType'=>$SiteType,'SiteId'=>$SiteId]) }}" >Add Product</a></li>
                 </ul>
             </li>

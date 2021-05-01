@@ -17,6 +17,8 @@ class DashboardController extends Controller
 
 public function MainDashboard($SiteType,$SiteId)
 {
+
+    return $SiteType;
     $getUser=Auth::guard("BlaxkUser")->user();
     
     //Check Site
@@ -24,18 +26,18 @@ public function MainDashboard($SiteType,$SiteId)
      
     if(!empty($getSite)){
 
-        if($SiteType =="PDFCenter"){
+        if($SiteType ==="PDFCenter"){
             return view('Dashboard.PDFCenter.main',['SiteType'=>$SiteType,'SiteId'=>$SiteId]);
         }
-        elseif ($SiteType =="Blogger") {
+        elseif ($SiteType ==="Blogger") {
             return view('Dashboard.Blogger.main',['SiteType'=>$SiteType,'SiteId'=>$SiteId]);
         }
-        elseif($SiteType =="Store"){
+        elseif($SiteType ==="Store"){
             return view('Dashboard.Store.main',['SiteType'=>$SiteType,'SiteId'=>$SiteId]);
         }
     }
     else{
-        return abort(404);
+        return 'no sitetype';
     }
 }
 

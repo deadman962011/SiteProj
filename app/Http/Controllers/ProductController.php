@@ -6,13 +6,30 @@ use Illuminate\Http\Request;
 
 use App\Models\BlaxkCategory;
 use App\Models\BlaxkAuthor;
+use App\Models\BlaxkProduct;
 use Auth;
 
 class ProductController extends Controller
 {
     //
 
-    public function AddProductGet(Request $request,$StoreType,$SiteId)
+
+    public function ProductListGet($SiteType,$SiteId)
+    {
+       
+        //get Products 
+        $getProducts=BlaxkProduct::where('SiteId',$SiteId)->get();
+        $getProducts->load('Category');
+        $getProducts->load('Author');
+
+        //render Product list View 
+
+        return view('Dashboard.Store.ProductList',['SiteType'=>$SiteType,'SiteId'=>$SiteId,'Products'=>$getProducts]);
+        
+
+    }
+
+    public function AddProductGet(Request $request,$SiteType,$SiteId)
     {
         
 
@@ -26,7 +43,7 @@ class ProductController extends Controller
         $getBrands=BlaxkAuthor::where('SiteId',$SiteId)->get();
  
         //render Add Product View 
-        return view('Dashboard.Store.AddProduct',['Categories'=>$getCategory,'Brands'=>$getBrands,'SiteType'=>$StoreType,'SiteId'=>$SiteId]);
+        return view('Dashboard.Store.AddProduct',['Categories'=>$getCategory,'Brands'=>$getBrands,'SiteType'=>$SiteType,'SiteId'=>$SiteId]);
 
     }
 
@@ -39,13 +56,13 @@ class ProductController extends Controller
 
         //Validate Inputs 
         $validate= $request->validate([
-         'ProdTitleI'=>'requried',
-         'ProdDescI'=>'requried',
-         'ProdCategoryI'=>'requried',
-         'ProdBrandI'=>'requried',
-         'ProdPriceI'=>'requried',
-         'ProdBodyI'=>'requried',
-         'ProdStatusI'=>'requried',
+         'ProdTitleI'=>'required',
+         'ProdDescI'=>'required',
+         'ProdCategoryI'=>'required',
+         'ProdBrandI'=>'required',
+         'ProdPriceI'=>'required',
+         'ProdBodyI'=>'required',
+         'ProdStatusI'=>'required',
         ]);
 
         //Check Category
@@ -65,7 +82,7 @@ class ProductController extends Controller
         //Save Product
         $SaveProd=new BlaxkProduct([
             'ProductName'=>$validate['ProdTitleI'],
-            'ProductPrice'=>$validate['ProductPriceI'],
+            'ProductPrice'=>$validate['ProdPriceI'],
             'ProductDesc'=>$validate['ProdDescI'],
             'ProductBody'=>$validate['ProdBodyI'],
             'ProductStatus'=>'Save',
@@ -74,9 +91,51 @@ class ProductController extends Controller
             'ProductBrand'=>$validate['ProdBrandI'],
         ]);
 
+        $SaveProd->save();
 
-        //ProductName	ProductPrice	ProductDesc	ProductBody	
-        //ProductStatus	SiteId	ProductCategory	ProductBrand
+        return redirect()->route("MainDashboard",['SiteType'=>$SiteType,'SiteId'=>$SiteId])->with("err",['err'=>"1",'message'=>'Product Successfully Added']);
+
+    }
+
+
+    public function DelProdPost(Request $request,$SiteType,$SiteId)
+    {
+          //validate Inputs
+    $validate=$request->validate([
+        "DelPassI"=>'required',
+        "ProdDelId"=>"required"
+    ]);
+  
+    //get User And Check User Password
+    $getUser=Auth::guard('BlaxkUser')->user();
+     
+   $pass= $validate['DelPassI'];
+    if(Auth::guard('BlaxkUser')->attempt(
+        [
+        'BlaxkUser'=>$getUser['BlaxkUser'],
+        'password'=>$pass
+        ])){
+
+        //get Product
+
+        $getProd=BlaxkProduct::find($validate['ProdDelId']);
+    
+        //Check If Authors have Items
+        if($getProd['ItemNum'] > 0){
+            return redirect()->route("AuthorList",['SiteType'=>$SiteType,"SiteId"=>$SiteId])->with("err",['err'=>"0",'message'=>"Cant Delete Category Delete Books First"]);
+        }
+        else{
+    
+        //Delete product
+        $getProd->delete();
+        return redirect()->route("AuthorList",['SiteType'=>$SiteType,"SiteId"=>$SiteId])->with("err",['err'=>"1",'message'=>"Category Succsessfully Deleted"]);
+
+        }
+
+     }
+     else{
+        return redirect()->route("CategoryList",['SiteType'=>$SiteType,"SiteId"=>$SiteId])->with("err",['err'=>"0",'message'=>"Wrong Password"]);
+     }
 
     }
 

@@ -13,4 +13,17 @@ class BlaxkPdf extends Model
 
     protected $fillable=['BookName','BookPic','BookLink','BlaxkCategory','BlaxkAuthor','BookReview','BookDesc','BookLang','BookPagesNum','BookSize','BookRelaseDate','ViewsNum','DownloadsNum','BookStatus','BookFile','SiteId'];
 
+
+    public function Category()
+    {
+        return $this->hasOne('App\Models\BlaxkCategory', 'id', 'BlaxkCategory');
+    }
+
+    public function Author()
+    {
+        return $this->hasOne('App\Models\BlaxkAuthor', 'id', 'BlaxkAuthor');
+    }
+    
+
+
 }

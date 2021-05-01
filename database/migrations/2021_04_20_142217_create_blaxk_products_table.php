@@ -21,6 +21,7 @@ class CreateBlaxkProductsTable extends Migration
             $table->text('ProductDesc');
             $table->text('ProductBody');
             $table->string('ProductStatus');
+            $table->string('ProductProps')->nullable();
             $table->bigInteger('SiteId')->unsigned()->index();
             $table->foreign('SiteId')->references('id')->on('blaxk_sites')->onDelete('cascade');
             $table->BigInteger('ProductCategory')->unsigned()->index();

@@ -14,11 +14,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/',function(){
+ return bcrypt('e173ed367256db629e2e664f727886f0');
+});
 
-Route::post('Login',['uses'=>'CustController@CustLogin','as'=>'CustLogin']);
+Route::get('login',function(){
+  return 'test';
+});
 
-Route::post('Register',['uses'=>'CustController@CustRegister','as'=>'CustRegister']);
+Route::post('login',['uses'=>'SiteController@LoginPost']);
 
-Route::get('Validate/{input}/{val}',['uses'=>'CustController@CustValidate','as'=>'CustValidate']);
+Route::group(['prefix'=>'BlaxkBlog/{SiteId}'],function(){
+
+  Route::get('CategoryAll',['uses'=>'CategoryController@CatGetApi']); 
+
+  Route::get('BlogAll',['uses'=>'BloggerController@BlogGetApi']);
+
+  Route::get('BlogByCat/{CatId}',['uses'=>'BloggerController@BlogsByCatGetApi']);
+
+});
 
 

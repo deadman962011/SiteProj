@@ -142,6 +142,19 @@ public function DelCategoryPost(Request $request,$SiteType,$SiteId)
 }
 
 
+public function CatGetApi(Request $request,$SiteId)
+{
+    //Validate Inputs
+ 
+ 
+    //get Categories
+    $getCategories=BlaxkCategory::where('SiteId',$SiteId)->get();
+
+    return response()->json($getCategories, 200);
+
+}
+
+
 
 
 }

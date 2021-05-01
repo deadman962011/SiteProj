@@ -61,7 +61,7 @@ Route::group(['prefix' => 'users'], function () {
 
     Route::group(['prefix' =>'{SiteType}/{SiteId}'],function(){
 
-        Route::get("Dashboard",['uses'=>"DashboardController@MainDashboard","as"=>"MainDashboard"]);
+        //Route::get("Dashboard",['uses'=>"DashboardController@MainDashboard","as"=>"MainDashboard"]);
         
         Route::get("CategoryList",['uses'=>'CategoryController@CategoryListGet','as'=>'CategoryList']);
 
@@ -91,8 +91,9 @@ Route::group(['prefix' => 'users'], function () {
     });
 
     Route::group(['prefix' =>'{SiteType}/{SiteId}','where'=>['SiteType'=>'PDFCenter']], function () {
-
-        Route::get("Dashboard",['uses'=>"DashboardController@MainDashboard","as"=>"MainDashboard"]);
+       
+        // Route::get("/",['uses'=>'Controller@PDFMainDashboard','as'=>'MainDashboard']);
+        Route::get("Dashboard",['uses'=>"Controller@PDFMainDashboard","as"=>"MainDashboard"]);
 
         Route::get("BookList",['uses'=>"PdfController@BooksListGet","as"=>"BookListGet"]);
 
@@ -111,11 +112,9 @@ Route::group(['prefix' => 'users'], function () {
 
     Route::group(['prefix' =>'{SiteType}/{SiteId}','where'=>['SiteType'=>'Blogger']], function () {
 
-        Route::get("/",function(){
-            return "hello In main Blogger";
-        });
+        //Route::get("/",['uses'=>'Controller@BloggerMainDashboard','as'=>'MainDashboard']);
 
-        Route::get("Dashboard",['uses'=>"DashboardController@MainDashboard","as"=>"MainDashboard"]);
+        Route::get("Dashboard",['uses'=>"DashboardController@BloggerMainDashboard","as"=>"MainDashboard"]);
     
         Route::get("AddBlog",['uses'=>"BloggerController@AddBlogGet",'as'=>"AddBlogGet"]);
 
@@ -129,11 +128,15 @@ Route::group(['prefix' => 'users'], function () {
 
     Route::group(['prefix' =>'{SiteType}/{SiteId}','where'=>['SiteType'=>'Store']], function () { 
 
-        Route::get("Dashboard",['uses'=>"DashboardController@MainDashboard","as"=>"MainDashboard"]);
+        //Route::get("Dashboard",['uses'=>"DashboardController@MainDashboard","as"=>"MainDashboard"]);
+
+        Route::get('ProductList',['uses'=>'ProductController@ProductListGet','as'=>'ProductListGet']);
 
         Route::get('AddProduct',['uses'=>'ProductController@AddProductGet','as'=>'AddProductGet']);
 
         Route::post('AddProduct',['uses'=>'ProductController@AddProductPost','as'=>'AddProductPost']);
+
+        Route::post('DelProdPost',['uses'=>'ProductController@DelProdPost','as'=>'DelProdPost']);
 
         
 

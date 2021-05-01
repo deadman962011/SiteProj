@@ -67,11 +67,27 @@ public function BooksListPost(Request $request,$SiteType,$SiteId)
 public function AddBookGet($SiteType,$SiteId)
 {   
 
+    //Check Author
+    $Authors=BlaxkAuthor::where(['SiteId'=>$SiteId,'id'=>$validate['BlogAuthorI']]);
+    $CheckAuthor=$Authors->count();
+    if($CheckAuthor = 0){
+        return redirect()->route("MainDashboard",['SiteType'=>$SiteType,'SiteId'=>$SiteId])->with("err",['err'=>"0",'message'=>'Wrong Author']);
+    }
+
+    //Check Category
+    $Categories=BlaxkAuthor::where(['SiteId'=>$SiteId,'id'=>$validate['BlogCategoryI']]);
+    $CheckCategory=$Categories->count();
+    if($CheckCategory = 0){
+        return redirect()->route("MainDashboard",['SiteType'=>$SiteType,'SiteId'=>$SiteId])->with("err",['err'=>"0",'message'=>'Wrong Category']);
+    }
+
     //get Categories
-    $getCategories=BlaxkCategory::where('SiteId',$SiteId)->get();
+    $getCategories=$Categories->get();
 
     //get Authors
-    $getAuthors=BlaxkAuthor::where('SiteId',$SiteId)->get();
+    $getAuthors=$Authors->get();
+
+
 
     return view("Dashboard.PDFCenter.AddBook",['SiteType'=>$SiteType,'SiteId'=>$SiteId,'Authors'=>$getAuthors,'Categories'=>$getCategories]);
 }

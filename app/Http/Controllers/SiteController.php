@@ -8,6 +8,8 @@ use App\Models\blaxkSite;
 use App\Models\BlaxkFolder;
 use App\Models\BlaxkAd;
 
+use Auth;
+
 class SiteController extends Controller
 {
     
@@ -23,7 +25,6 @@ class SiteController extends Controller
             "SiteUserI"=>"required",
             "SitePassI"=>"required",
         ]);
-
 
 
         //check User From DB
@@ -44,7 +45,7 @@ class SiteController extends Controller
                 "SiteType"=>$validate['SiteTypeI'],
                 "SiteUser"=>$saveUser['id'],
                 "PlanType"=>$validate['SitePlanI'],
-                'ClientToken'=>md5(rand(1, 10) . microtime()),
+                'ClientToken'=>bcrypt(md5(rand(1, 10) . microtime())),
             ]);
             $saveStore->save();
 
@@ -170,6 +171,39 @@ class SiteController extends Controller
         }
     }
 
+
+
+
+    public function LoginPost(Request $request)
+    {
+         //Validate Inputs
+
+     
+        $validate=$request->validate([
+            'SiteId'=>'required',
+            'SiteToken'=>'required'
+        ]);
+
+        //Check Site 
+        if($token =Auth::guard("api")->attempt(["id"=>$validate['SiteId'],"password"=>$validate['SiteToken']])){
+        
+
+            $getUser=Auth::guard("api")->user();
+    
+             //get Site Info By User Id
+             $getSite=blaxkSite::where("SiteUser",$getUser['id'])->first();
+    
+            return response()->json($token, 200);
+
+        }
+        else{
+            return "baaaad";
+        }
+
+        return 'controller Working fine';
+
+        //Done
+    }
 
 
 }

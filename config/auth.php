@@ -44,10 +44,14 @@ return [
             'driver' => 'session',
             'provider' => 'BlaxkUser',
         ],
+        'web'=>[
+            'driver'=>'session',
+            'provider'=>'BigBlaxk'
+        ],
 
         'api' => [
             'driver' => 'jwt',
-            'provider' => 'cust',
+            'provider' => 'site',
             'hash' => false,
         ],
     ],
@@ -79,6 +83,11 @@ return [
             'driver' => 'eloquent',
             'table' => 'big_blaxks',
             'model'=> App\Models\BlaxkUser::class
+        ],
+        'site' => [
+            'driver' => 'eloquent',
+            'table' => 'blaxk_sites',
+            'model'=> App\Models\BlaxkSite::class
         ],
 
         // 'users' => [

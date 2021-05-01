@@ -51,6 +51,20 @@ class BloggerController extends Controller
         'BlogStatusI'=>"required"
         //  'BlogThumbI'=>'required'
         ]);
+
+        //Check Author
+        $Author=BlaxkAuthor::where(['SiteId'=>$SiteId,'id'=>$validate['BlogAuthorI']])->first();
+       
+        if(empty($Author)){
+            return redirect()->route("MainDashboard",['SiteType'=>$SiteType,'SiteId'=>$SiteId])->with("err",['err'=>"0",'message'=>'Wrong Author']);
+        }
+
+        //Check Category
+        $Category=BlaxkCategory::where(['SiteId'=>$SiteId,'id'=>$validate['BlogCategoryI']])->first();
+        
+        if(empty($Category)){
+            return redirect()->route("MainDashboard",['SiteType'=>$SiteType,'SiteId'=>$SiteId])->with("err",['err'=>"0",'message'=>'Wrong Category']);
+        }
         
         // //upload Thumbnail
 
@@ -89,6 +103,16 @@ class BloggerController extends Controller
             ]);
 
             $saveBlog->save();
+
+
+            //Increase Category ItemNum +1
+            $NewCat=$Category['ItemNum'] +1 ;
+            return $Category->update(['ItemNum'=>$NewCat]);
+
+            //Increase Author ItemNum +1
+            $NewAut=$Author['ItemNum'] +1 ;
+            $Author->update(['ItemNum'=>$NewAut]);
+            //
 
             return redirect()->route("MainDashboard",['SiteType'=>$SiteType,'SiteId'=>$SiteId])->with("err",['err'=>"1",'message'=>'Blog Successfuly Created']);
     }
@@ -147,6 +171,44 @@ class BloggerController extends Controller
 
          return  response(200);
          
+
+ }
+
+
+ public function BlogGetApi(Request $request ,$SiteId)
+ {
+     //Validate Param
+
+     //get Blogs 
+     $getBlogs=BlaxkBlog::where('SiteId',$SiteId)->orderBy('created_at','desc')->get();
+     $getBlogs->load('Category');
+     $getBlogs->load('Author');
+     
+
+     return response()->json($getBlogs, 200);
+ }
+
+
+ public function BlogsByCatGetApi(Request $request ,$SiteId,$CatId)
+ {
+     //validate Params 
+
+
+     //Check SiteId
+
+     //Check Category
+
+     //Delete This
+    $CheckCategory=BlaxkCategory::where('CategoryName',$CatId)->first();
+     //
+
+     //get Blogs 
+     $getBlogs=BlaxkBlog::where(['BlogCategory'=>$CheckCategory['id'],'SiteId'=>$SiteId])->orderBy('created_at','desc')->get();
+     $getBlogs->load('Category');
+     $getBlogs->load('Author');
+     return response()->json($getBlogs, 200);
+     //Done
+
 
  }
 
