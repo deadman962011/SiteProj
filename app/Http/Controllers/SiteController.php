@@ -177,7 +177,6 @@ class SiteController extends Controller
     public function LoginPost(Request $request)
     {
          //Validate Inputs
-
      
         $validate=$request->validate([
             'SiteId'=>'required',
@@ -199,8 +198,6 @@ class SiteController extends Controller
         else{
             return "baaaad";
         }
-
-        return 'controller Working fine';
 
         //Done
     }

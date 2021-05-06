@@ -54,6 +54,11 @@ return [
             'provider' => 'site',
             'hash' => false,
         ],
+        'cust'=>[
+            'driver'=>'jwt',
+            'provider'=>'cust',
+            'hash'=>false
+        ]
     ],
 
     /*
@@ -89,6 +94,12 @@ return [
             'table' => 'blaxk_sites',
             'model'=> App\Models\BlaxkSite::class
         ],
+        'cust' => [
+            'driver' => 'eloquent',
+            'table' => 'blaxk_custs',
+            'model'=> App\Models\BlaxkCust::class
+        ],
+
 
         // 'users' => [
         //     'driver' => 'database',

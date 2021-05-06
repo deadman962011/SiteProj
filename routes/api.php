@@ -24,13 +24,52 @@ Route::get('login',function(){
 
 Route::post('login',['uses'=>'SiteController@LoginPost']);
 
-Route::group(['prefix'=>'BlaxkBlog/{SiteId}'],function(){
+Route::group(['prefix'=>'BlaxkBlog/{SiteId}','middleware'=>'auth:api'],function(){
 
   Route::get('CategoryAll',['uses'=>'CategoryController@CatGetApi']); 
 
   Route::get('BlogAll',['uses'=>'BloggerController@BlogGetApi']);
 
   Route::get('BlogByCat/{CatId}',['uses'=>'BloggerController@BlogsByCatGetApi']);
+
+});
+
+Route::group(['prefix'=>'BlaxkStore/{SiteId}','middleware'=>'CheckSite'],function(){
+
+  Route::get('/',function(){
+    return 'done';
+  });
+  
+  Route::post('SaveCust',['uses'=>'CustController@SaveCust']);
+
+  Route::post('CustLogin',['uses'=>'CustController@CustLogin']);
+
+    //getProducts
+
+    //getCategories
+    
+    //getBrands
+
+
+    Route::group(['middleware'=>'auth:cust'],function(){
+
+      //SaveOrder
+
+      //Get Orders
+
+      //SendMessage
+
+      //getNotifs
+
+      //getMessages
+
+      //
+
+
+
+
+    });
+
 
 });
 
