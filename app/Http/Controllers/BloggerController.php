@@ -175,7 +175,7 @@ class BloggerController extends Controller
  }
 
 
- public function BlogGetApi(Request $request ,$SiteId)
+ public function BlogGetApi(Request $request ,$SiteType,$SiteId)
  {
      //Validate Param
 
@@ -189,7 +189,7 @@ class BloggerController extends Controller
  }
 
 
- public function BlogsByCatGetApi(Request $request ,$SiteId,$CatId)
+ public function BlogsByCatGetApi(Request $request ,$SiteType,$SiteId,$CatId)
  {
      //validate Params 
 

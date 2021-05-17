@@ -128,7 +128,7 @@ Route::group(['prefix' => 'users'], function () {
 
     Route::group(['prefix' =>'{SiteType}/{SiteId}','where'=>['SiteType'=>'Store']], function () { 
 
-        //Route::get("Dashboard",['uses'=>"DashboardController@MainDashboard","as"=>"MainDashboard"]);
+        Route::get("Dashboard",['uses'=>"Controller@StoreMainDashboard","as"=>"MainDashboard"]);
 
         Route::get('ProductList',['uses'=>'ProductController@ProductListGet','as'=>'ProductListGet']);
 
@@ -137,6 +137,10 @@ Route::group(['prefix' => 'users'], function () {
         Route::post('AddProduct',['uses'=>'ProductController@AddProductPost','as'=>'AddProductPost']);
 
         Route::post('DelProdPost',['uses'=>'ProductController@DelProdPost','as'=>'DelProdPost']);
+
+        Route::post('UpdateProdAj',['uses'=>'ProductController@UpdateProdAj','as'=>'UpdateProdAj']);
+
+        Route::post('UpdateProdPost',['uses'=>'ProductController@UpdateProdPost','as'=>"UpdateProdPost"]);
 
         
 

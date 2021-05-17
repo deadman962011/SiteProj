@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',function(){
- return bcrypt('e173ed367256db629e2e664f727886f0');
+
+  return bcrypt(6);
+
 });
 
 Route::get('login',function(){
@@ -24,53 +26,73 @@ Route::get('login',function(){
 
 Route::post('login',['uses'=>'SiteController@LoginPost']);
 
-Route::group(['prefix'=>'BlaxkBlog/{SiteId}','middleware'=>'auth:api'],function(){
+
+Route::group(['prefix'=>'{SiteType}/{SiteId}','middleware'=>'CheckSite'],function(){
+
+  Route::post('SaveCust',['uses'=>'CustController@SaveCust']);
+
+  // Route::post('CustLogin',['uses'=>'CustController@CustLogin']);
+
+  Route::post('CustLogin',['uses'=>'CustController@CustLogin2']);
 
   Route::get('CategoryAll',['uses'=>'CategoryController@CatGetApi']); 
 
-  Route::get('BlogAll',['uses'=>'BloggerController@BlogGetApi']);
+  Route::get('AuthorAll',['uses'=>'AuthorController@AuthorGetApi']);
 
-  Route::get('BlogByCat/{CatId}',['uses'=>'BloggerController@BlogsByCatGetApi']);
+  Route::get('AdAll',['uses'=>'SiteController@AdAllGetApi']);
 
-});
+  //Routes For BlaxkStore
+  Route::group(['prefix'=>'/', 'where'=>['SiteType','BlaxkStore']],function(){
 
-Route::group(['prefix'=>'BlaxkStore/{SiteId}','middleware'=>'CheckSite'],function(){
+    Route::get('ProductAll',['uses'=>'ProductController@ProductAll']);
 
-  Route::get('/',function(){
-    return 'done';
-  });
-  
-  Route::post('SaveCust',['uses'=>'CustController@SaveCust']);
-
-  Route::post('CustLogin',['uses'=>'CustController@CustLogin']);
-
-    //getProducts
-
-    //getCategories
-    
-    //getBrands
-
-
+    //Protected Routes For BlaxkStore
     Route::group(['middleware'=>'auth:cust'],function(){
 
       //SaveOrder
-
+  
       //Get Orders
-
+  
       //SendMessage
-
+  
       //getNotifs
-
+  
       //getMessages
-
+  
       //
-
-
-
-
+  
     });
+
+  });
+
+  //Routes For BlaxkBlog
+  Route::group(['prefix'=>'/', 'where'=>['SiteType','BlaxkBlog']],function(){
+
+    Route::get('/',['uses'=>'ApiController@BlaxkBlogGet']);
+
+    Route::get('BlogAll',['uses'=>'BloggerController@BlogGetApi']);
+
+    Route::get('BlogByCat/{CatId}',['uses'=>'BloggerController@BlogsByCatGetApi']);
+
+  });
+
 
 
 });
+
+Route::group(['prefix'=>'BlaxkBlog/{SiteId}','middleware'=>'auth:api'],function(){
+
+  
+
+
+
+});
+
+
+    //getProducts
+  
+    //getBrands
+
+
 
 

@@ -56,15 +56,17 @@ class SiteController extends Controller
 
 
             //Add Ads rows For Site
-
+            
+            //HeadBanner
             $saveAd0=new BlaxkAd([
-                "AdName"=>"HeadBanner",
+                "AdName"=>"MainHeadBanner",
                 "AdImage"=>"http://127.0.0.1/cdn/images/1.jpg",
                 "AdView"=>"0",
                 "AdClick"=>"0",
                 "SiteId"=>$SiteId
             ]);
 
+            //MainSideBox
             $saveAd1=new BlaxkAd([
                 "AdName"=>"MainSideBox",
                 "AdImage"=>"http://127.0.0.1/cdn/images/1.jpg",
@@ -73,6 +75,7 @@ class SiteController extends Controller
                 "SiteId"=>$SiteId
             ]);
 
+            //MainSideBanner
             $saveAd2=new BlaxkAd([
                 "AdName"=>"MainSideBanner",
                 "AdImage"=>"http://127.0.0.1/cdn/images/1.jpg",
@@ -81,32 +84,45 @@ class SiteController extends Controller
                 "SiteId"=>$SiteId
             ]);
 
+            //MainTopBanner
             $saveAd3=new BlaxkAd([
-                "AdName"=>"AdTopBlogBanner",
+                "AdName"=>"MainTopBanner",
                 "AdImage"=>"http://127.0.0.1/cdn/images/1.jpg",
                 "AdView"=>"0",
                 "AdClick"=>"0",
                 "SiteId"=>$SiteId
             ]);
 
+            //MainBottomBanner
             $saveAd4=new BlaxkAd([
-                "AdName"=>"AdBottomBlogBanner",
+                "AdName"=>"MainBottomBanner",
                 "AdImage"=>"http://127.0.0.1/cdn/images/1.jpg",
                 "AdView"=>"0",
                 "AdClick"=>"0",
                 "SiteId"=>$SiteId
             ]);
 
+            //BlogTopBox
             $saveAd5=new BlaxkAd([
-                "AdName"=>"AdBlogTopBox",
+                "AdName"=>"BlogInnerTopBox",
                 "AdImage"=>"http://127.0.0.1/cdn/images/1.jpg",
                 "AdView"=>"0",
                 "AdClick"=>"0",
                 "SiteId"=>$SiteId
             ]);
 
+            //BlogBottomBox
             $saveAd6=new BlaxkAd([
-                "AdName"=>"AdBlogBottomBox",
+                "AdName"=>"BlogInnerBottomBox",
+                "AdImage"=>"http://127.0.0.1/cdn/images/1.jpg",
+                "AdView"=>"0",
+                "AdClick"=>"0",
+                "SiteId"=>$SiteId
+            ]);
+
+            //BlogInnerBanner
+            $saveAd7=new BlaxkAd([
+                "AdName"=>"BlogInnerBanner",
                 "AdImage"=>"http://127.0.0.1/cdn/images/1.jpg",
                 "AdView"=>"0",
                 "AdClick"=>"0",
@@ -120,6 +136,7 @@ class SiteController extends Controller
             $saveAd4->save();
             $saveAd5->save();
             $saveAd6->save();
+            $saveAd7->save();
             
         // experemental Not  Tested Yet And Need For Updates
 
@@ -183,6 +200,7 @@ class SiteController extends Controller
             'SiteToken'=>'required'
         ]);
 
+        
         //Check Site 
         if($token =Auth::guard("api")->attempt(["id"=>$validate['SiteId'],"password"=>$validate['SiteToken']])){
         
@@ -200,6 +218,22 @@ class SiteController extends Controller
         }
 
         //Done
+    }
+
+
+
+
+    public function AdAllGetApi($SiteType,$SiteId)
+    {
+        //valiadate Params 
+
+
+        //get Ads 
+        $getAds=BlaxkAd::where('SiteId',$SiteId)->get();
+
+        return response()->json($getAds, 200);
+
+
     }
 
 

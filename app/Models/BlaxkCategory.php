@@ -13,6 +13,6 @@ class BlaxkCategory extends Model
 						
 
 
-    protected $fillable=['CategoryName','CategoryIcon','CategoryColor','ItemNum','SiteId'];
+    protected $fillable=['CategoryName','CategoryIcon','CategoryThumb','CategoryColor','ItemNum','SiteId'];
 
 }

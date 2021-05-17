@@ -18,6 +18,7 @@ class CreateBlaxkCategoriesTable extends Migration
             $table->timestamps();
             $table->String("CategoryName");
             $table->String("CategoryIcon");
+            $table->String('CategoryThumb')->default('default Thumb');
             $table->bigInteger("SiteId")->unsigned()->index();
             $table->foreign('SiteId')->references('id')->on('blaxk_sites')->onDelete('cascade');
             $table->Integer("ItemNum")->default(0);

@@ -45,12 +45,18 @@ public function AddCategoryPost(Request $request,$SiteType,$SiteId)
             "CategoryName"=>$validate['CategoryNameI'],
             "CategoryIcon"=>$validate['CategoryIconI'],
             "CategoryColor"=>$validate['CategoryColorI'],
+            'CategoryThumb'=>'test',//Default
             "SiteId"=>$SiteId,
             "BookNum"=>0
             
         ]);
     
         $saveCategory->save();
+
+
+        
+
+
     
         return redirect()->route("MainDashboard",['SiteType'=>$SiteType,'SiteId'=>$SiteId])->with("err",["err","err"=>"1","message"=>"PDF Category Saved Successfully"]);    
     }
@@ -142,13 +148,14 @@ public function DelCategoryPost(Request $request,$SiteType,$SiteId)
 }
 
 
-public function CatGetApi(Request $request,$SiteId)
+public function CatGetApi(Request $request,$SiteType,$SiteId)
 {
     //Validate Inputs
  
  
     //get Categories
     $getCategories=BlaxkCategory::where('SiteId',$SiteId)->get();
+
 
     return response()->json($getCategories, 200);
 

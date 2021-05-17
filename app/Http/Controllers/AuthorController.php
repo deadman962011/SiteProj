@@ -212,4 +212,20 @@ public function DelAuthorPost(Request $request,$SiteType,$SiteId)
 
 
 
+
+public function AuthorGetApi($SiteType,$SiteId)
+{
+    //get Authors 
+    $getAuthors=BlaxkAuthor::where('SiteId',$SiteId)->get();
+
+    return response()->json(['code'=>200,'message'=>'GetAuthorSuccessErr','status'=>true,'item'=>$getAuthors], 200);
+    //Done
+
+
+
+
+}
+
+
+
 }

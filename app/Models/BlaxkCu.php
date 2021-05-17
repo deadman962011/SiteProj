@@ -3,18 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-
-class BlaxkCust extends Authenticatable implements JWTSubject
+class BlaxkCu extends Authenticatable implements JWTSubject
 {
+ 
 
-     //								
-     protected $fillable=['CustFullName','CustUserName','CustMail','CustPass','CustStatus','CustActiveToken','CustCountry','CustAddress','SiteId'];
+    protected $fillable=['CustFullName','CustUserName','CustMail','CustPass','CustStatus','CustActiveToken','CustCountry','CustAddress','SiteId'];
 
-     protected $hidden=['CustPass'];
+    protected $hidden= ['CustPass'];
 
     public function getAuthPassword()
     {
@@ -31,9 +30,4 @@ class BlaxkCust extends Authenticatable implements JWTSubject
    {
        return [];
    }
-
-     }
-
-
-
-
+}

@@ -14,8 +14,10 @@
 
 @if ($SiteType == "Blogger")
  @include('inc.BloggerSideNav') 
-@else
+@elseif( $SiteType == "PDFCENTER" )
  @include('inc.PDFCenterSideNav') 
+@elseif( $SiteType == "Store" )
+ @include('inc.StoreSideNav')
 @endif
 
 @include('inc.error')
@@ -51,7 +53,7 @@
         </tbody>
     </table>
 
-    <!-- Modal -->
+<!--  Update Author Modal -->
 <div id="UpdateAuthor" class="modal fade" role="dialog">
     <div class="modal-dialog">
   

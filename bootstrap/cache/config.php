@@ -106,16 +106,16 @@
         'driver' => 'session',
         'provider' => 'BigBlaxk',
       ),
+      'cu' => 
+      array (
+        'driver' => 'jwt',
+        'provider' => 'cu',
+        'hash' => false,
+      ),
       'api' => 
       array (
         'driver' => 'jwt',
         'provider' => 'site',
-        'hash' => false,
-      ),
-      'cust' => 
-      array (
-        'driver' => 'jwt',
-        'provider' => 'cust',
         'hash' => false,
       ),
     ),
@@ -139,11 +139,17 @@
         'table' => 'blaxk_sites',
         'model' => 'App\\Models\\BlaxkSite',
       ),
-      'cust' => 
+      'customer' => 
       array (
         'driver' => 'eloquent',
         'table' => 'blaxk_custs',
         'model' => 'App\\Models\\BlaxkCust',
+      ),
+      'cu' => 
+      array (
+        'driver' => 'eloquent',
+        'table' => 'blaxk_cus',
+        'model' => 'App\\Models\\BlaxkCu',
       ),
     ),
     'passwords' => 

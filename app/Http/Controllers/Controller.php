@@ -62,5 +62,18 @@ class Controller extends BaseController
         }
     }
 
+    public function StoreMainDashboard($SiteType,$SiteId)
+    {
+        //
+        $getUser=Auth::guard("BlaxkUser")->user();
+    
+        //Check Site
+        $getSite=blaxkSite::where([['SiteType',$SiteType],['id',$SiteId],['SiteUser',$getUser['id']]])->first();
+        if(!empty($getSite)){
+       
+         return view('Dashboard.Store.main',['SiteType'=>$SiteType,'SiteId'=>$SiteId]);
+        }
+    }
+
 
 }

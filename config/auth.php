@@ -48,17 +48,18 @@ return [
             'driver'=>'session',
             'provider'=>'BigBlaxk'
         ],
-
+        'cu'=>[
+            'driver'=>'jwt',
+            'provider'=>'cu',
+            'hash'=>false
+        ],
         'api' => [
             'driver' => 'jwt',
             'provider' => 'site',
             'hash' => false,
         ],
-        'cust'=>[
-            'driver'=>'jwt',
-            'provider'=>'cust',
-            'hash'=>false
-        ]
+
+
     ],
 
     /*
@@ -94,11 +95,16 @@ return [
             'table' => 'blaxk_sites',
             'model'=> App\Models\BlaxkSite::class
         ],
-        'cust' => [
+        'customer' => [
             'driver' => 'eloquent',
             'table' => 'blaxk_custs',
             'model'=> App\Models\BlaxkCust::class
         ],
+        'cu'=>[
+            'driver'=>'eloquent',
+            'table'=>'blaxk_cus',
+            'model'=> App\Models\BlaxkCu::class
+        ]
 
 
         // 'users' => [

@@ -24,7 +24,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::babFakFZIZa4na50',
+            '_route' => 'generated::HnNT2XSVIRTg9Jb5',
           ),
           1 => NULL,
           2 => 
@@ -44,7 +44,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::gl9L37eGRdh8VHqv',
+            '_route' => 'generated::6Pq8FrwWYNcJODIl',
           ),
           1 => NULL,
           2 => 
@@ -61,7 +61,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::yWEWytYqJqhEEuLe',
+            '_route' => 'generated::mB7W5ml9ME26BNyp',
           ),
           1 => NULL,
           2 => 
@@ -80,7 +80,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::0sUoreZniumLUUhG',
+            '_route' => 'generated::u9ea2HdetDAq4geA',
           ),
           1 => NULL,
           2 => 
@@ -100,7 +100,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::9tAZOQoaaXNdiDcP',
+            '_route' => 'generated::r4rpwxGTSZn67d9t',
           ),
           1 => NULL,
           2 => 
@@ -120,7 +120,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::xYvXgeOlHdz1biCj',
+            '_route' => 'generated::C7Kn0h1OVHjVFQNx',
           ),
           1 => NULL,
           2 => 
@@ -288,21 +288,68 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/api/Blaxk(?|Blog/([^/]++)/(?|CategoryAll(*:48)|Blog(?|All(*:65)|ByCat/([^/]++)(*:86)))|Store/([^/]++)(?|(*:112)|/(?|SaveCust(*:132)|CustLogin(*:149))))|/users/(?|([^/]++)/([^/]++)/(?|CategoryList(*:203)|A(?|d(?|d(?|Category(*:231)|Author(*:245))|evertisments(*:266)|Update(?|(*:283)|Aj(*:293)))|uthorList(*:312))|Update(?|Category(?|Aj(*:343)|Post(*:355))|Author(?|(*:373)|Aj(*:383)))|Del(?|Category(*:407)|Author(*:421)))|(Blogger)/([^/]++)/Dashboard(*:459)|(PDFCenter)/([^/]++)/(?|BookList(?|(*:502))|AddBook(?|(*:521))|DelBookPost(*:541)|UpdateBook(?|Aj(*:564)|Post(*:576)))|(Blogger)/([^/]++)/(?|AddBlog(?|(*:618))|SaveImage(*:636)|DelImage(*:652))|(Store)/([^/]++)/(?|ProductList(*:692)|AddProduct(?|(*:713))|DelProdPost(*:733))))/?$}sDu',
+      0 => '{^(?|/api/([^/]++)/([^/]++)(?|/(?|SaveCust(*:44)|C(?|ustLogin(*:63)|ategoryAll(*:80))|A(?|uthorAll(*:100)|dAll(*:112))|ProductAll(*:131)|Blog(?|All(*:149)|ByCat/([^/]++)(*:171)))|(*:181))|/users/(?|([^/]++)/([^/]++)/(?|CategoryList(*:233)|A(?|d(?|d(?|Category(*:261)|Author(*:275))|evertisments(*:296)|Update(?|(*:313)|Aj(*:323)))|uthorList(*:342))|Update(?|Category(?|Aj(*:373)|Post(*:385))|Author(?|(*:403)|Aj(*:413)))|Del(?|Category(*:437)|Author(*:451)))|(Store)/([^/]++)/Dashboard(*:487)|(PDFCenter)/([^/]++)/(?|BookList(?|(*:530))|AddBook(?|(*:549))|DelBookPost(*:569)|UpdateBook(?|Aj(*:592)|Post(*:604)))|(Blogger)/([^/]++)/(?|AddBlog(?|(*:646))|SaveImage(*:664)|DelImage(*:680))|(Store)/([^/]++)/(?|ProductList(*:720)|AddProduct(?|(*:741))|DelProdPost(*:761)|UpdateProd(?|Aj(*:784)|Post(*:796)))))/?$}sDu',
     ),
     3 => 
     array (
-      48 => 
+      44 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::fb250C7vz2sMguUL',
+            '_route' => 'generated::brqAyWK2kimi0Aak',
           ),
           1 => 
           array (
-            0 => 'SiteId',
+            0 => 'SiteType',
+            1 => 'SiteId',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      63 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'generated::EJAMosCazAdMnA4p',
+          ),
+          1 => 
+          array (
+            0 => 'SiteType',
+            1 => 'SiteId',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      80 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'generated::5Sxk9RIcT4i0F9QU',
+          ),
+          1 => 
+          array (
+            0 => 'SiteType',
+            1 => 'SiteId',
           ),
           2 => 
           array (
@@ -315,17 +362,18 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      65 => 
+      100 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::4OaKv679nNmyCZvv',
+            '_route' => 'generated::XP29y1hdUphC2HI7',
           ),
           1 => 
           array (
-            0 => 'SiteId',
+            0 => 'SiteType',
+            1 => 'SiteId',
           ),
           2 => 
           array (
@@ -335,30 +383,6 @@ app('router')->setCompiledRoutes(
           3 => NULL,
           4 => false,
           5 => false,
-          6 => NULL,
-        ),
-      ),
-      86 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'generated::otYtKaizhaDtTNMg',
-          ),
-          1 => 
-          array (
-            0 => 'SiteId',
-            1 => 'CatId',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
           6 => NULL,
         ),
       ),
@@ -368,11 +392,12 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::LVDcnSdEXaRAmpy8',
+            '_route' => 'generated::lqcAOiO7gpDlZADl',
           ),
           1 => 
           array (
-            0 => 'SiteId',
+            0 => 'SiteType',
+            1 => 'SiteId',
           ),
           2 => 
           array (
@@ -381,25 +406,27 @@ app('router')->setCompiledRoutes(
           ),
           3 => NULL,
           4 => false,
-          5 => true,
+          5 => false,
           6 => NULL,
         ),
       ),
-      132 => 
+      131 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::blUobwx8E3Pqor3Z',
+            '_route' => 'generated::KpTT2ENfDcee6WPN',
           ),
           1 => 
           array (
-            0 => 'SiteId',
+            0 => 'SiteType',
+            1 => 'SiteId',
           ),
           2 => 
           array (
-            'POST' => 0,
+            'GET' => 0,
+            'HEAD' => 1,
           ),
           3 => NULL,
           4 => false,
@@ -413,15 +440,17 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::0nfY6abUtI6AfuL6',
+            '_route' => 'generated::ykVOhUpwEBi023lG',
           ),
           1 => 
           array (
-            0 => 'SiteId',
+            0 => 'SiteType',
+            1 => 'SiteId',
           ),
           2 => 
           array (
-            'POST' => 0,
+            'GET' => 0,
+            'HEAD' => 1,
           ),
           3 => NULL,
           4 => false,
@@ -429,7 +458,56 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      203 => 
+      171 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'generated::Kenpxm1w2V2MWlOy',
+          ),
+          1 => 
+          array (
+            0 => 'SiteType',
+            1 => 'SiteId',
+            2 => 'CatId',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      181 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'generated::dXR64tXpMiLEpQG8',
+          ),
+          1 => 
+          array (
+            0 => 'SiteType',
+            1 => 'SiteId',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      233 => 
       array (
         0 => 
         array (
@@ -453,7 +531,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      231 => 
+      261 => 
       array (
         0 => 
         array (
@@ -476,7 +554,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      245 => 
+      275 => 
       array (
         0 => 
         array (
@@ -499,7 +577,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      266 => 
+      296 => 
       array (
         0 => 
         array (
@@ -523,7 +601,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      283 => 
+      313 => 
       array (
         0 => 
         array (
@@ -546,7 +624,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      293 => 
+      323 => 
       array (
         0 => 
         array (
@@ -569,7 +647,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      312 => 
+      342 => 
       array (
         0 => 
         array (
@@ -593,7 +671,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      343 => 
+      373 => 
       array (
         0 => 
         array (
@@ -616,7 +694,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      355 => 
+      385 => 
       array (
         0 => 
         array (
@@ -639,7 +717,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      373 => 
+      403 => 
       array (
         0 => 
         array (
@@ -662,7 +740,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      383 => 
+      413 => 
       array (
         0 => 
         array (
@@ -685,7 +763,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      407 => 
+      437 => 
       array (
         0 => 
         array (
@@ -708,7 +786,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      421 => 
+      451 => 
       array (
         0 => 
         array (
@@ -731,7 +809,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      459 => 
+      487 => 
       array (
         0 => 
         array (
@@ -755,7 +833,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      502 => 
+      530 => 
       array (
         0 => 
         array (
@@ -799,7 +877,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      521 => 
+      549 => 
       array (
         0 => 
         array (
@@ -843,7 +921,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      541 => 
+      569 => 
       array (
         0 => 
         array (
@@ -866,7 +944,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      564 => 
+      592 => 
       array (
         0 => 
         array (
@@ -889,7 +967,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      576 => 
+      604 => 
       array (
         0 => 
         array (
@@ -912,7 +990,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      618 => 
+      646 => 
       array (
         0 => 
         array (
@@ -956,7 +1034,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      636 => 
+      664 => 
       array (
         0 => 
         array (
@@ -979,7 +1057,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      652 => 
+      680 => 
       array (
         0 => 
         array (
@@ -1002,7 +1080,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      692 => 
+      720 => 
       array (
         0 => 
         array (
@@ -1026,7 +1104,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      713 => 
+      741 => 
       array (
         0 => 
         array (
@@ -1070,13 +1148,59 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      733 => 
+      761 => 
       array (
         0 => 
         array (
           0 => 
           array (
             '_route' => 'DelProdPost',
+          ),
+          1 => 
+          array (
+            0 => 'SiteType',
+            1 => 'SiteId',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      784 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'UpdateProdAj',
+          ),
+          1 => 
+          array (
+            0 => 'SiteType',
+            1 => 'SiteId',
+          ),
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      796 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'UpdateProdPost',
           ),
           1 => 
           array (
@@ -1108,7 +1232,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::babFakFZIZa4na50' => 
+    'generated::HnNT2XSVIRTg9Jb5' => 
     array (
       'methods' => 
       array (
@@ -1122,15 +1246,17 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'api',
         ),
-        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":278:{@o1ALhUEGxI0KMr+ex8uc+cFDuu73SZMQNXnhPO2WCC8=.a:5:{s:3:"use";a:0:{}s:8:"function";s:66:"function(){
- return \\bcrypt(\'e173ed367256db629e2e664f727886f0\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001de38fe1000000000ae5f5a6";}}',
+        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":248:{@pxXmWF6k933zdSDQBpw+Rg0V45yyywqvb/M/JkOAVdo=.a:5:{s:3:"use";a:0:{}s:8:"function";s:36:"function(){
+
+  return \\bcrypt(6);
+
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000009fc9260000000003c98585";}}',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::babFakFZIZa4na50',
+        'as' => 'generated::HnNT2XSVIRTg9Jb5',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1145,7 +1271,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::gl9L37eGRdh8VHqv' => 
+    'generated::6Pq8FrwWYNcJODIl' => 
     array (
       'methods' => 
       array (
@@ -1159,15 +1285,15 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'api',
         ),
-        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":242:{@+IF/+HOaJMb91TkGRGa+iKEOf4Met6GKGLJXmd9rGmA=.a:5:{s:3:"use";a:0:{}s:8:"function";s:30:"function(){
+        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":242:{@sUZ3O4wTTCIQ76xVZu1BD/RiH3vQIY7SS2HehzZ8G5Y=.a:5:{s:3:"use";a:0:{}s:8:"function";s:30:"function(){
   return \'test\';
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001de38fe7000000000ae5f5a6";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000009fc9200000000003c98585";}}',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::gl9L37eGRdh8VHqv',
+        'as' => 'generated::6Pq8FrwWYNcJODIl',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1182,7 +1308,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::yWEWytYqJqhEEuLe' => 
+    'generated::mB7W5ml9ME26BNyp' => 
     array (
       'methods' => 
       array (
@@ -1202,7 +1328,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::yWEWytYqJqhEEuLe',
+        'as' => 'generated::mB7W5ml9ME26BNyp',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1217,162 +1343,13 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::fb250C7vz2sMguUL' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'api/BlaxkBlog/{SiteId}/CategoryAll',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'api',
-          1 => 'auth:api',
-        ),
-        'uses' => 'App\\Http\\Controllers\\CategoryController@CatGetApi',
-        'controller' => 'App\\Http\\Controllers\\CategoryController@CatGetApi',
-        'namespace' => 'App\\Http\\Controllers',
-        'prefix' => 'api/BlaxkBlog/{SiteId}',
-        'where' => 
-        array (
-        ),
-        'as' => 'generated::fb250C7vz2sMguUL',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-    ),
-    'generated::4OaKv679nNmyCZvv' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'api/BlaxkBlog/{SiteId}/BlogAll',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'api',
-          1 => 'auth:api',
-        ),
-        'uses' => 'App\\Http\\Controllers\\BloggerController@BlogGetApi',
-        'controller' => 'App\\Http\\Controllers\\BloggerController@BlogGetApi',
-        'namespace' => 'App\\Http\\Controllers',
-        'prefix' => 'api/BlaxkBlog/{SiteId}',
-        'where' => 
-        array (
-        ),
-        'as' => 'generated::4OaKv679nNmyCZvv',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-    ),
-    'generated::otYtKaizhaDtTNMg' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'api/BlaxkBlog/{SiteId}/BlogByCat/{CatId}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'api',
-          1 => 'auth:api',
-        ),
-        'uses' => 'App\\Http\\Controllers\\BloggerController@BlogsByCatGetApi',
-        'controller' => 'App\\Http\\Controllers\\BloggerController@BlogsByCatGetApi',
-        'namespace' => 'App\\Http\\Controllers',
-        'prefix' => 'api/BlaxkBlog/{SiteId}',
-        'where' => 
-        array (
-        ),
-        'as' => 'generated::otYtKaizhaDtTNMg',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-    ),
-    'generated::LVDcnSdEXaRAmpy8' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'api/BlaxkStore/{SiteId}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'api',
-          1 => 'CheckSite',
-        ),
-        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":246:{@uQiVk2KbFLjIltLoXrRIvn2qbpoNy5a6eQdkVrDnJZw=.a:5:{s:3:"use";a:0:{}s:8:"function";s:34:"function(){
-    return \'done\';
-  }";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001de38fe8000000000ae5f5a6";}}',
-        'namespace' => 'App\\Http\\Controllers',
-        'prefix' => 'api/BlaxkStore/{SiteId}',
-        'where' => 
-        array (
-        ),
-        'as' => 'generated::LVDcnSdEXaRAmpy8',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-    ),
-    'generated::blUobwx8E3Pqor3Z' => 
+    'generated::brqAyWK2kimi0Aak' => 
     array (
       'methods' => 
       array (
         0 => 'POST',
       ),
-      'uri' => 'api/BlaxkStore/{SiteId}/SaveCust',
+      'uri' => 'api/{SiteType}/{SiteId}/SaveCust',
       'action' => 
       array (
         'middleware' => 
@@ -1383,11 +1360,11 @@ app('router')->setCompiledRoutes(
         'uses' => 'App\\Http\\Controllers\\CustController@SaveCust',
         'controller' => 'App\\Http\\Controllers\\CustController@SaveCust',
         'namespace' => 'App\\Http\\Controllers',
-        'prefix' => 'api/BlaxkStore/{SiteId}',
+        'prefix' => 'api/{SiteType}/{SiteId}',
         'where' => 
         array (
         ),
-        'as' => 'generated::blUobwx8E3Pqor3Z',
+        'as' => 'generated::brqAyWK2kimi0Aak',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1402,13 +1379,13 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::0nfY6abUtI6AfuL6' => 
+    'generated::EJAMosCazAdMnA4p' => 
     array (
       'methods' => 
       array (
         0 => 'POST',
       ),
-      'uri' => 'api/BlaxkStore/{SiteId}/CustLogin',
+      'uri' => 'api/{SiteType}/{SiteId}/CustLogin',
       'action' => 
       array (
         'middleware' => 
@@ -1416,14 +1393,14 @@ app('router')->setCompiledRoutes(
           0 => 'api',
           1 => 'CheckSite',
         ),
-        'uses' => 'App\\Http\\Controllers\\CustController@CustLogin',
-        'controller' => 'App\\Http\\Controllers\\CustController@CustLogin',
+        'uses' => 'App\\Http\\Controllers\\CustController@CustLogin2',
+        'controller' => 'App\\Http\\Controllers\\CustController@CustLogin2',
         'namespace' => 'App\\Http\\Controllers',
-        'prefix' => 'api/BlaxkStore/{SiteId}',
+        'prefix' => 'api/{SiteType}/{SiteId}',
         'where' => 
         array (
         ),
-        'as' => 'generated::0nfY6abUtI6AfuL6',
+        'as' => 'generated::EJAMosCazAdMnA4p',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1438,7 +1415,282 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::0sUoreZniumLUUhG' => 
+    'generated::5Sxk9RIcT4i0F9QU' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'api/{SiteType}/{SiteId}/CategoryAll',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'CheckSite',
+        ),
+        'uses' => 'App\\Http\\Controllers\\CategoryController@CatGetApi',
+        'controller' => 'App\\Http\\Controllers\\CategoryController@CatGetApi',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => 'api/{SiteType}/{SiteId}',
+        'where' => 
+        array (
+        ),
+        'as' => 'generated::5Sxk9RIcT4i0F9QU',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'generated::XP29y1hdUphC2HI7' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'api/{SiteType}/{SiteId}/AuthorAll',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'CheckSite',
+        ),
+        'uses' => 'App\\Http\\Controllers\\AuthorController@AuthorGetApi',
+        'controller' => 'App\\Http\\Controllers\\AuthorController@AuthorGetApi',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => 'api/{SiteType}/{SiteId}',
+        'where' => 
+        array (
+        ),
+        'as' => 'generated::XP29y1hdUphC2HI7',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'generated::lqcAOiO7gpDlZADl' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'api/{SiteType}/{SiteId}/AdAll',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'CheckSite',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SiteController@AdAllGetApi',
+        'controller' => 'App\\Http\\Controllers\\SiteController@AdAllGetApi',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => 'api/{SiteType}/{SiteId}',
+        'where' => 
+        array (
+        ),
+        'as' => 'generated::lqcAOiO7gpDlZADl',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'generated::KpTT2ENfDcee6WPN' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'api/{SiteType}/{SiteId}/ProductAll',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'CheckSite',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ProductController@ProductAll',
+        'controller' => 'App\\Http\\Controllers\\ProductController@ProductAll',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => 'api/{SiteType}/{SiteId}/',
+        'where' => 
+        array (
+          0 => 'SiteType',
+          1 => 'BlaxkStore',
+        ),
+        'as' => 'generated::KpTT2ENfDcee6WPN',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        0 => 'SiteType',
+        1 => 'BlaxkStore',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'generated::dXR64tXpMiLEpQG8' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'api/{SiteType}/{SiteId}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'CheckSite',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ApiController@BlaxkBlogGet',
+        'controller' => 'App\\Http\\Controllers\\ApiController@BlaxkBlogGet',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => 'api/{SiteType}/{SiteId}/',
+        'where' => 
+        array (
+          0 => 'SiteType',
+          1 => 'BlaxkBlog',
+        ),
+        'as' => 'generated::dXR64tXpMiLEpQG8',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        0 => 'SiteType',
+        1 => 'BlaxkBlog',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'generated::ykVOhUpwEBi023lG' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'api/{SiteType}/{SiteId}/BlogAll',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'CheckSite',
+        ),
+        'uses' => 'App\\Http\\Controllers\\BloggerController@BlogGetApi',
+        'controller' => 'App\\Http\\Controllers\\BloggerController@BlogGetApi',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => 'api/{SiteType}/{SiteId}/',
+        'where' => 
+        array (
+          0 => 'SiteType',
+          1 => 'BlaxkBlog',
+        ),
+        'as' => 'generated::ykVOhUpwEBi023lG',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        0 => 'SiteType',
+        1 => 'BlaxkBlog',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'generated::Kenpxm1w2V2MWlOy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'api/{SiteType}/{SiteId}/BlogByCat/{CatId}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'api',
+          1 => 'CheckSite',
+        ),
+        'uses' => 'App\\Http\\Controllers\\BloggerController@BlogsByCatGetApi',
+        'controller' => 'App\\Http\\Controllers\\BloggerController@BlogsByCatGetApi',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => 'api/{SiteType}/{SiteId}/',
+        'where' => 
+        array (
+          0 => 'SiteType',
+          1 => 'BlaxkBlog',
+        ),
+        'as' => 'generated::Kenpxm1w2V2MWlOy',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        0 => 'SiteType',
+        1 => 'BlaxkBlog',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'generated::u9ea2HdetDAq4geA' => 
     array (
       'methods' => 
       array (
@@ -1452,15 +1704,15 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":259:{@HxV9x56L7Y8oZJ3TTM41dxsbyabWVcL+3P+rLAZMxgk=.a:5:{s:3:"use";a:0:{}s:8:"function";s:47:"function () {
+        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":259:{@/hS3usGVwFS4k2CGTuZFsxoIb7h3t26hRHd5Bz0esaU=.a:5:{s:3:"use";a:0:{}s:8:"function";s:47:"function () {
     return \\bcrypt(\'a5522122\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001de38fec000000000ae5f5a6";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000009fc9290000000003c98585";}}',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => NULL,
         'where' => 
         array (
         ),
-        'as' => 'generated::0sUoreZniumLUUhG',
+        'as' => 'generated::u9ea2HdetDAq4geA',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1475,7 +1727,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::9tAZOQoaaXNdiDcP' => 
+    'generated::r4rpwxGTSZn67d9t' => 
     array (
       'methods' => 
       array (
@@ -1489,16 +1741,16 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":323:{@XCb14EP88csHX4GCoMaaggAui683Mbi+FRVF+m0PnA4=.a:5:{s:3:"use";a:0:{}s:8:"function";s:110:"function() {
+        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":323:{@DV1TIvsyHhRvK8iCVvEn4a/3wtQcTL1pmlWzFLqtUKI=.a:5:{s:3:"use";a:0:{}s:8:"function";s:110:"function() {
     \\Storage::cloud()->put(\'fuck.txt\', \'FuckYou\');
     return \'File was saved to Google Drive\';
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001de38fd2000000000ae5f5a6";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000009fc9170000000003c98585";}}',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => NULL,
         'where' => 
         array (
         ),
-        'as' => 'generated::9tAZOQoaaXNdiDcP',
+        'as' => 'generated::r4rpwxGTSZn67d9t',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1513,7 +1765,7 @@ app('router')->setCompiledRoutes(
       'lockSeconds' => NULL,
       'waitSeconds' => NULL,
     ),
-    'generated::xYvXgeOlHdz1biCj' => 
+    'generated::C7Kn0h1OVHjVFQNx' => 
     array (
       'methods' => 
       array (
@@ -1527,20 +1779,20 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":498:{@Dqurq+n3+N4IKqb+cUc6IAiRQWCpTvsGEBblGBPrKKo=.a:5:{s:3:"use";a:0:{}s:8:"function";s:285:"function() {
+        'uses' => 'C:32:"Opis\\Closure\\SerializableClosure":498:{@/GeRKxcwOQgZC/YRUUw68xWnHJ9xlEL6EsO7ntOAzO8=.a:5:{s:3:"use";a:0:{}s:8:"function";s:285:"function() {
     $dir = \'/\';
     $recursive = false; // Get subdirectories also?
     $contents = \\collect(\\Storage::cloud()->listContents($dir, $recursive));
 
     //return $contents->where(\'type\', \'=\', \'dir\'); // directories
     return $contents->where(\'type\', \'=\', \'file\'); // files
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"000000001de38fd0000000000ae5f5a6";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000009fc9110000000003c98585";}}',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => NULL,
         'where' => 
         array (
         ),
-        'as' => 'generated::xYvXgeOlHdz1biCj',
+        'as' => 'generated::C7Kn0h1OVHjVFQNx',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2330,14 +2582,14 @@ app('router')->setCompiledRoutes(
           0 => 'web',
           1 => 'auth:BlaxkUser',
         ),
-        'uses' => 'App\\Http\\Controllers\\DashboardController@BloggerMainDashboard',
+        'uses' => 'App\\Http\\Controllers\\Controller@StoreMainDashboard',
         'as' => 'MainDashboard',
-        'controller' => 'App\\Http\\Controllers\\DashboardController@BloggerMainDashboard',
+        'controller' => 'App\\Http\\Controllers\\Controller@StoreMainDashboard',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => 'users/{SiteType}/{SiteId}',
         'where' => 
         array (
-          'SiteType' => 'Blogger',
+          'SiteType' => 'Store',
         ),
       ),
       'fallback' => false,
@@ -2346,7 +2598,7 @@ app('router')->setCompiledRoutes(
       ),
       'wheres' => 
       array (
-        'SiteType' => 'Blogger',
+        'SiteType' => 'Store',
       ),
       'bindingFields' => 
       array (
@@ -2908,6 +3160,82 @@ app('router')->setCompiledRoutes(
         'uses' => 'App\\Http\\Controllers\\ProductController@DelProdPost',
         'as' => 'DelProdPost',
         'controller' => 'App\\Http\\Controllers\\ProductController@DelProdPost',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => 'users/{SiteType}/{SiteId}',
+        'where' => 
+        array (
+          'SiteType' => 'Store',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'SiteType' => 'Store',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'UpdateProdAj' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'users/{SiteType}/{SiteId}/UpdateProdAj',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth:BlaxkUser',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ProductController@UpdateProdAj',
+        'as' => 'UpdateProdAj',
+        'controller' => 'App\\Http\\Controllers\\ProductController@UpdateProdAj',
+        'namespace' => 'App\\Http\\Controllers',
+        'prefix' => 'users/{SiteType}/{SiteId}',
+        'where' => 
+        array (
+          'SiteType' => 'Store',
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+        'SiteType' => 'Store',
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+    ),
+    'UpdateProdPost' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'users/{SiteType}/{SiteId}/UpdateProdPost',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth:BlaxkUser',
+        ),
+        'uses' => 'App\\Http\\Controllers\\ProductController@UpdateProdPost',
+        'as' => 'UpdateProdPost',
+        'controller' => 'App\\Http\\Controllers\\ProductController@UpdateProdPost',
         'namespace' => 'App\\Http\\Controllers',
         'prefix' => 'users/{SiteType}/{SiteId}',
         'where' => 
